@@ -1,6 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.XR;
 
 public class BallController : MonoBehaviour
 {
@@ -15,8 +16,7 @@ public class BallController : MonoBehaviour
 
     void Update()
     {
-        Move(); 
-
+        Move();
     }
     void Move() //Movement script making the ball do its default "move right" will be replaced later with a rest phase till hit
     {
@@ -41,6 +41,17 @@ public class BallController : MonoBehaviour
         if (collision.gameObject.tag == "Ceiling")
         {
             ballSpeedY *= -1;
+        }
+        if(collision.gameObject.tag == "Attack")
+        {
+            ballSpeedX += -1;
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            print("ouch");
         }
     }
 

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ceiling
   - Floor
+  - Wall R
+  - Wall L
   - Wall
   layers:
   - Default
