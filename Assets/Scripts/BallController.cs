@@ -20,7 +20,7 @@ public class BallController : MonoBehaviour
     }
     void Move() //Movement script making the ball do its default "move right" will be replaced later with a rest phase till hit
     {
-        moveVector = new Vector2(Rb.position.x + ballSpeedX * Time.deltaTime, Rb.position.y - ballSpeedY * Time.deltaTime); //is constantly called in update and makes the ball move in the movevectory direction based on the calculations of position x and y
+        moveVector = new Vector2(Rb.position.x + ballSpeedX, Rb.position.y - ballSpeedY); //is constantly called in update and makes the ball move in the movevectory direction based on the calculations of position x and y
         Rb.MovePosition(moveVector); //moves vector of rb in the desired direction above
     }
     private void OnCollisionEnter2D(Collision2D collision) //test collisions making the ball bounce the oposite direction on contact (ie right makes it go left)
