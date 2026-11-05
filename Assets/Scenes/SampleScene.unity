@@ -297,7 +297,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 00000000i
+  m_ApplyToSortingLayers: 000000006b8eb2daa79674065390ce8ai
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -371,10 +371,10 @@ GameObject:
   - component: {fileID: 738806789}
   - component: {fileID: 738806788}
   - component: {fileID: 738806790}
-  - component: {fileID: 738806792}
   - component: {fileID: 738806791}
   - component: {fileID: 738806793}
-  m_Layer: 0
+  - component: {fileID: 738806794}
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -486,7 +486,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -508,7 +508,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -519,20 +519,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &738806792
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 738806787}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17f40efc636a9c146bc4ca26cc076058, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  MoveSpd: 5
+  m_Constraints: 4
 --- !u!114 &738806793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -563,6 +550,21 @@ MonoBehaviour:
   m_DefaultActionMap: 
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &738806794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738806787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a70481a227a528d4b9fbb3f65e1b5f20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  moveSpeed: 8
+  jumpSpeed: 8
+  HitSpeed: {x: 10, y: 20}
 --- !u!1 &807440344
 GameObject:
   m_ObjectHideFlags: 0
@@ -1007,7 +1009,7 @@ GameObject:
   - component: {fileID: 1290906190}
   - component: {fileID: 1290906189}
   - component: {fileID: 1290906193}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}

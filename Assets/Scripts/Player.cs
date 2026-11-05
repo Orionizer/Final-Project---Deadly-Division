@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
     //NOTE: Comments are more common compared to previous labs and scripts to make it easier to refer to and reuse in future contexts.
-    Vector2 MoveInput; //calls for vector2 input
+    Vector2 moveInput; //calls for vector2 input
     Rigidbody2D rb; //calls for player rigidbody
     [SerializeField] float MoveSpd = 5f; //sets multiplied speed for player found in run
 
@@ -15,20 +15,20 @@ public class Player : MonoBehaviour
     void Update()
     {
         Run(); //calls for run down below.
-        //FlpSprite(); //calls to flip the sprite down below.
+        //FlipSprite(); //calls to flip the sprite down below.
     }
     void OnMove(InputValue value)
     {
-        MoveInput = value.Get<Vector2>(); //reads for player input
-        //print(MoveInput); //debug test for input
+        moveInput = value.Get<Vector2>(); //reads for player input
+        //print(moveInput); //debug test for input
     }
     void Run()
     {
-        Vector2 PlayerVel = new Vector2(MoveInput.x * MoveSpd, rb.linearVelocity.y); //sets player velocity based on input and rigidbody (is also put in update)
+        Vector2 PlayerVel = new Vector2(moveInput.x * MoveSpd, rb.linearVelocity.y); //sets player velocity based on input and rigidbody (is also put in update)
         rb.linearVelocity = PlayerVel; //sets player velocity based on input (is also put in update)
     }
 
-    void FlpSprite()
+    void FlipSprite()
     {
         bool PlyrHorzSpd = Mathf.Abs(rb.linearVelocity.x) > Mathf.Epsilon; //checks if player has horizontal speed
         if (PlyrHorzSpd)
