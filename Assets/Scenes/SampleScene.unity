@@ -564,6 +564,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   moveSpeed: 8
   jumpSpeed: 8
+  maxJumps: 2
   HitSpeed: {x: 10, y: 20}
 --- !u!1 &807440344
 GameObject:
@@ -1028,8 +1029,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a282f14c4d701943b1f7150c79a155b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  ballSpeedX: 0
-  ballSpeedY: 0.5
+  angle: 0
+  ballSpeed: 0
 --- !u!50 &1290906190
 Rigidbody2D:
   serializedVersion: 5
@@ -1049,7 +1050,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
